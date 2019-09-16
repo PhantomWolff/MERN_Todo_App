@@ -1,0 +1,29 @@
+{
+  "name": "mern_shopping_list",
+  "version": "1.0.0",
+  "description": "Shopping list built with the MERN stack",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "cd client && npm install",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "cd client && npm run start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuid": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    },
+  "author": "Ben Wolff",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^4.1.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.0",
+    "prop-types": "^15.7.2",
+    "terra-divider": "^3.17.0",
+    "terra-icon": "^3.20.0",
+    "terra-table": "^3.25.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}
