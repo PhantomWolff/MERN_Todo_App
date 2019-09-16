@@ -4,17 +4,19 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
+    "node-sass": "^4.12.0",
     "prop-types": "^15.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-intl": "^2.9.0",
     "react-scripts": "3.1.1",
+    "terra-aggregate-translations": "^1.1.0",
     "terra-arrange": "^3.21.0",
     "terra-base": "^5.18.0",
     "terra-button": "^3.23.0",
     "terra-form-input": "^2.25.0",
-    "terra-spacer": "^3.21.0",
-    "uuid": "^3.3.3"
+    "terra-i18n": "^4.14.0",
+    "terra-spacer": "^3.21.0"
   },
   "scripts": {
     "aggregate-translations": "tt-aggregate-translations -b ./ -d ./src/**/translations -d ./translations -o ./node_modules/terra-i18n/node_modules -f es6",
@@ -22,7 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prebuild": "npm run aggregate-translations"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,9 +42,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000",
-  "devDependencies": {
-    "node-sass": "^4.12.0",
-    "terra-aggregate-translations": "^1.1.0"
-  }
+  "proxy": "http://localhost:5000"
 }
