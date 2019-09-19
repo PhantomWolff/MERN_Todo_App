@@ -162,7 +162,7 @@ function App() {
 
     return (
         <Base locale="en">
-            <h1 style={{textAlign: "center"}}>The Official Todo List of Earth</h1>
+            <h1 style={{textAlign: "center"}}>David Please Try to Change This Title</h1>
             <TodoForm addTodo={addTodo} />
             <TodoTable
                 todos={todos}
